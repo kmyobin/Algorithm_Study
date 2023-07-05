@@ -1,7 +1,7 @@
 ## Info
 <a href="https://www.acmicpc.net/problem/21939" rel="nofollow">21939 문제 추천 시스템 Version 1</a>
 
-## ?풀이
+## ?? 풀이
 처음에는 `multimap`을 이용하여 풀었다. `multimap`은 `map`과 거의 동일하지만 `key값이 중복 가능하다`는 점에서 차이가 있다.
 
 따라서 `key`값을 `난이도`, `value`를 `문제 번호`로 설정하여 풀었는데 시간 초과가 발생하였다. 검색해보니 `multimap`으로 풀었던 사람이 시간초과가 발생하여 `multiset`으로 바꿔서 풀었더니 성공했다고 하길래 나도 바꿨다. `multiset`은 value값이 중복되지 않는다. 
