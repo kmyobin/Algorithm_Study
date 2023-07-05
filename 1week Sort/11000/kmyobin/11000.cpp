@@ -17,7 +17,7 @@ void quicksort(int left, int right){
   int pivot = A[(left + right) / 2].first;
 
   while(p_left<=p_right){
-    // 시작 시간(s) 기준으로 오름차수 정렬
+    // 시작 시간(s) 기준으로 오름차순 정렬
     while(A[p_left].first<pivot){
       p_left++;
     }

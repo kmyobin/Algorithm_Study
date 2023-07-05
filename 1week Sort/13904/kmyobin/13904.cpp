@@ -9,7 +9,6 @@ priority_queue<int, vector<int>, greater<int>> PQ; // 오름차순 정렬
 vector<pair<int, int>> A;
 int memo[1001];
 // 점수가 큰 순으로 내림차순 정렬
-// 
 
 void quicksort(int left, int right){
   if(left>=right)

@@ -37,18 +37,9 @@ void quicksort(int left, int right){
   quicksort(p_left, right);
 }
 
-void show(int N){
-  for (int i = 0; i < N; i++)
-  {
-    cout << A[i].first << ", " << A[i].second << endl;
-  }
-  
-}
-
 int compare_interview(int N){
   int cnt = N;
   int low_grade = A[0].second;
-  int high_grade = A[0].second;
   for (int i = 1; i < N; i++)
   {
     if(A[i].second>low_grade){
@@ -86,7 +77,6 @@ int main(){
     quicksort(0, N - 1); // 정렬
 
     // 서류 기준으로 오름차순 정렬 완료
-
     cout << compare_interview(N) << endl;
   }
   
