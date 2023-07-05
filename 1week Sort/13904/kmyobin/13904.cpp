@@ -8,6 +8,8 @@ using namespace std;
 priority_queue<int, vector<int>, greater<int>> PQ; // 오름차순 정렬
 vector<pair<int, int>> A;
 int memo[1001];
+// 점수가 큰 순으로 내림차순 정렬
+// 
 
 void quicksort(int left, int right){
   if(left>=right)
@@ -59,7 +61,7 @@ int main(){
     for (int j = A[i].second; j >= 1; j--){
       // 최대한 늦게 집어넣기 위해 뒤부터 접근
       if(memo[j]==0){
-        memo[j] = A[i].first;
+        memo[j] = A[i].first; // j일차에 A[i].first점을 맞는다.
         maximum = (maximum > j) ? maximum : j;
         break;
       }
