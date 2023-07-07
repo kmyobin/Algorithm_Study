@@ -3,7 +3,7 @@
 using namespace std;
 
 string a;
-stack<char> c; // 문자 담기
+stack<char> c; // 부호, 괄호 담기
 
 int main(){
   ios_base::sync_with_stdio(false);
