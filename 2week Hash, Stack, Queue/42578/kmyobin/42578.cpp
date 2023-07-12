@@ -30,7 +30,6 @@ int solution(vector<vector<string>> clothes) {
     }
 
     answer = 1; // 곱하는 것이므로 1로 설정
-    multimap<string, string>::iterator iter;
 
     for (int i = 0; i < k; i++){
       answer *= (um.count(x[i]) + 1);
