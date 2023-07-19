@@ -21,12 +21,11 @@ int answer;
 
 
 void dfs(int r){
-  visited[r] = true; // r행 방문 완료
+  visited[r] = true; 
   //cout << "A[" << r << "].size : " << A[r].size() << endl;
   for (int c = 0; c < A[r].size(); c++){
     int new_r = A[r][c];
     if(!visited[new_r]){
-      // c행을 방문하지 않고 A[r][c]가 1이라면
       answer++;
       dfs(new_r);
     }
