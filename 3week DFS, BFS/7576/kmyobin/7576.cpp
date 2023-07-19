@@ -13,8 +13,6 @@ int dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
 // 오른쪽, 아래, 왼쪽, 위
 int answer = -1;
 
-
-
 // 하루가 지나면 익은 것들 인접한 곳의 익지 않는 것들이 익는다
 // 혼자 저절로 익지 못함
 // 모든 도마도가 며칠이 지나면 다 익는지?
@@ -51,17 +49,12 @@ void bfs(){
       int cc = T.front().second;
 
       T.pop();
-      //cout << "q.size() : " << q.size() << endl;
 
       for (int i = 0; i < 4; i++){
-        //cout << rr + dy[i] << ", " << cc + dx[i] << endl;
         if(safe(rr+dy[i], cc+dx[i]) && A[rr+dy[i]][cc+dx[i]]==0){
           // 영역을 넘어가지 않고, 해당 영역이 안 익은 토마토라면
-          
-          //A[rr + dy[i]][cc + dx[i]] = 1;
           A[rr + dy[i]][cc + dx[i]] = A[rr][cc] + 1;
           answer = (answer > A[rr + dy[i]][cc + dx[i]]) ? answer : A[rr + dy[i]][cc + dx[i]];
-          //visited_bfs[rr + dy[i]][cc + dx[i]] = true;
           T.push({rr + dy[i], cc + dx[i]});
         }
       }
