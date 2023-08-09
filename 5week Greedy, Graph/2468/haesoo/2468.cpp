@@ -28,7 +28,7 @@ int main() {
     int maxregion = 1;
     for (int m = 1; m < hmax; m++) { // 최대 높이까지만 각 높이 별 영역 수 세면 됨
         int ans = 0;
-        //memset(visited, 0, sizeof(visited));
+        memset(visited, 0, sizeof(visited));
         for (int y = 0; y < N; y++) {
             for (int x = 0; x < N; x++) {
                 if (map[y][x] > m && !visited[y][x]) {
