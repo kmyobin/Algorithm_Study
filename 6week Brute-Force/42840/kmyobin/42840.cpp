@@ -41,21 +41,16 @@ vector<int> solution(vector<int> answers) {
     sort(aa, aa + 3, cmp);
 
     int maximum = aa[0].total;
-    answer.push_back(aa[0].num); // 최댓값 먼저 담고
-
-    bool isDup = false;
-    for (int i = 1; i < 3; i++){
+    
+    for (int i = 0; i < 3; i++){
       if(aa[i].total==maximum){
         // 높은 점수를 받은 사람이 여럿일 경우
         answer.push_back(aa[i].num); // 수포자[i] 담기
-        isDup = true;
       }
     }
 
-    if(isDup){
-      sort(answer.begin(), answer.end()); // 오름차순 정렬
-    }
-
+    sort(answer.begin(), answer.end()); // 오름차순 정렬
+      
     return answer;
 }
 
